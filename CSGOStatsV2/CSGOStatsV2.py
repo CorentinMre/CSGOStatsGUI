@@ -13,6 +13,9 @@ class CSGOStatsV2:
         self.url_overview = f"http://api.tracker.gg/api/v2/csgo/standard/profile/steam/{self.steam_id}?__cf_chl_f_tk=csgoStats"
         self.url_weapons = f"http://api.tracker.gg/api/v2/csgo/standard/profile/steam/{self.steam_id}/segments/weapon?__cf_chl_f_tk=csgoStats"
         self.url_maps = f"http://api.tracker.gg/api/v2/csgo/standard/profile/steam/{self.steam_id}/segments/map?__cf_chl_f_tk=csgoStats"
+
+        self.month = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+
         self.stats = self.getStats()
 
 
@@ -50,6 +53,8 @@ class CSGOStatsV2:
                 break
         data["globalStats"] = self.getOverview()
         
+        listLastUpdate = data["last"].split("-")
+        data["last"] = str(int(listLastUpdate[2].split(" ")[0])) + " " + self.month[int(listLastUpdate[1])] + " " + listLastUpdate[0] + " | " + listLastUpdate[2].split(" ")[1]
         
         return data
     
@@ -75,7 +80,7 @@ if __name__ == "__main__":
     player.getStats()
     player.getWeapons()
     player.getMaps()
-    print(player.stats)
+    print(player.stats["last"])
     #jsonString = json.dumps(player.stats)
     #jsonFile = open("data.json", "w")
     #jsonFile.write(jsonString)
