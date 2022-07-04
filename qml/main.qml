@@ -1548,7 +1548,7 @@ Window{
 
             // console.log(dict(data))
             lblNamePlayer.text = data["name"]
-            imgAvarar.source = data["urlAvatar"].replace("https","http")
+            imgAvarar.source = "http://avatars.akamai.steamstatic.com/" + data["urlAvatar"].split("/").slice(-1)
             lblLastUpdate.text = "Last update: " + data["last"]
             imgRank.source = "../images/rankImg/"+data["rank"]+".png"
             lblBasicInfo.text = data["globalStats"]["timePlayed"]["displayValue"] + " | " + data["globalStats"]["wins"]["displayValue"] + " Wins | " + data["globalStats"]["kills"]["displayValue"]+ " Kills"
