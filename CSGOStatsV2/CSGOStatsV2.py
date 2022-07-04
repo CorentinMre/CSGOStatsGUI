@@ -55,7 +55,7 @@ class CSGOStatsV2:
         data["globalStats"] = self.getOverview()
         
         listLastUpdate = data["last"].split("-")
-        data["last"] = str(int(listLastUpdate[2].split(" ")[0])) + " " + self.month["en"][int(listLastUpdate[1])] + " " + listLastUpdate[0] + " | " + listLastUpdate[2].split(" ")[1]
+        data["last"] = str(int(listLastUpdate[2].split(" ")[0])) + " " + self.month["en"][int(listLastUpdate[1])-1] + " " + listLastUpdate[0] + " | " + listLastUpdate[2].split(" ")[1]
         
         return data
     
