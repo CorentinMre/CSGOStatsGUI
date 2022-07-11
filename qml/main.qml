@@ -1022,11 +1022,30 @@ Window{
                 color: "#00ffffff"
                 clip: true
 
-                ScrollView {
+                Flickable {
+                    id: flickableWeapons
                     x: 0
                     y: 38
+                    contentHeight: (70 + 3) * repeaterWeapons.model.length - 3
                     width: 548
                     height: 400
+                    maximumFlickVelocity: 1200
+                    clip: true
+
+                    ScrollBar.vertical: ScrollBar {
+                        id: controlWeapons
+                        size: 0.3
+                        position: 0.2
+                        orientation: Qt.Vertical
+                        visible: flickableWeapons.moving || flickableWeapons.moving
+
+                        contentItem: Rectangle {
+                            implicitWidth: 6
+                            implicitHeight: 100
+                            radius: width / 2
+                            color: controlWeapons.pressed ? "#55aaff" : "#40405f"
+                        }
+                    }
 
                     Column {
                         x: 8
@@ -1039,7 +1058,7 @@ Window{
 
                                     "metadata": {
                                         "name": "AK-47",
-                                        "imageUrl": "https://trackercdn.com/cdn/tracker.gg/csgo/weapons/197_icon-ak47.png"
+                                        "imageUrl": "../images/logo.png"//https://trackercdn.com/cdn/tracker.gg/csgo/weapons/197_icon-ak47.png
                                     },
                                     "stats": {
                                         "kills": {
@@ -1167,11 +1186,30 @@ Window{
                 visible: false
                 color: "#00ffffff"
                 clip: true
-                ScrollView {
+                Flickable {
+                    id: flickableMaps
                     x: 0
                     y: 38
+                    contentHeight: (70 + 3) * repeaterMaps.model.length - 3
                     width: 548
                     height: 400
+                    maximumFlickVelocity: 1200
+                    clip: true
+
+                    ScrollBar.vertical: ScrollBar {
+                        id: controlMaps
+                        size: 0.3
+                        position: 0.2
+                        orientation: Qt.Vertical
+                        visible: flickableMaps.moving || flickableMaps.moving
+
+                        contentItem: Rectangle {
+                            implicitWidth: 6
+                            implicitHeight: 100
+                            radius: width / 2
+                            color: controlMaps.pressed ? "#55aaff" : "#40405f"
+                        }
+                    }
                     Column {
                         x: 8
                         y: 3
@@ -1181,7 +1219,7 @@ Window{
 
                                     "metadata": {
                                         "name": "AK-47",
-                                        "imageUrl": "https://trackercdn.com/cdn/tracker.gg/csgo/maps/ar_baggage.jpg"
+                                        "imageUrl": "../images/logo.png"//https://trackercdn.com/cdn/tracker.gg/csgo/maps/ar_baggage.jpg
                                     },
                                     "stats": {
                                         "rounds": {
@@ -1274,11 +1312,30 @@ Window{
             anchors.topMargin: 35
             anchors.rightMargin: 0
 
-            ScrollView {
+            Flickable {
+                id: flickablePlayerFound
                 x: 8
                 y: 14
+                contentHeight: (70 + 3) * repeaterPlayersFound.model.length - 3
                 width: 547
                 height: 543
+                maximumFlickVelocity: 1200
+                clip: true
+
+                ScrollBar.vertical: ScrollBar {
+                    id: controlPlayerFound
+                    size: 0.3
+                    position: 0.2
+                    orientation: Qt.Vertical
+                    visible: flickablePlayerFound.moving || flickablePlayerFound.moving
+
+                    contentItem: Rectangle {
+                        implicitWidth: 6
+                        implicitHeight: 100
+                        radius: width / 2
+                        color: controlPlayerFound.pressed ? "#55aaff" : "#40405f"
+                    }
+                }
                 Column {
                     x: 15
                     y: 3
@@ -1320,7 +1377,7 @@ Window{
 
 
                         }
-                        model: [{"name": "AK-47", "description":"Leo Urahara", "avatarUrl": "https://avatars.akamai.steamstatic.com/07c6992293fe0088dc1826fffcfcf7bd89ff2ba9_medium.jpg"}]
+                        model: [{"name": "AK-47", "description":"Leo Urahara", "avatarUrl": "../images/logo.png"}]//https://avatars.akamai.steamstatic.com/07c6992293fe0088dc1826fffcfcf7bd89ff2ba9_medium.jpg
                     }
                     spacing: 2
                 }
@@ -1580,6 +1637,7 @@ Window{
 
             repeaterWeapons.model = data["weapons"]
 
+
             //Maps
 
             repeaterMaps.model = data["maps"]
@@ -1590,6 +1648,6 @@ Window{
 }
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.9}D{i:111}D{i:120}
+    D{i:0;formeditorZoom:0.9}D{i:126}
 }
 ##^##*/
