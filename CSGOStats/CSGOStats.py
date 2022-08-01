@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class CSGOStatsV2:
+class CSGOStats:
 
     def __init__(self, steam_id:str, detailsMatches:bool = True):
         self.steam_id = steam_id
