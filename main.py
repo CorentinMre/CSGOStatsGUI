@@ -64,7 +64,7 @@ class MainWindow(QObject):
 
         def getInfoPlayer():
             try:
-                player = CSGOStats.CSGOStatsV2(steamId, detailsMatches=False)
+                player = CSGOStatsV2.CSGOStatsV2(steamId, detailsMatches=False)
                 player.getWeapons()
                 player.getMaps()
                 self.resultSearch.emit(player.stats)
