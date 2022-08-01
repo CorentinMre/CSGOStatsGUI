@@ -5,7 +5,7 @@ from threading import Thread
 import requests
 from bs4 import BeautifulSoup
 #Importing the 'CSGOStats' class
-import CSGOStatsV2
+import CSGOStats
 
 # IMPORT MODULES
 from PySide6.QtGui import QGuiApplication, QIcon
@@ -64,7 +64,7 @@ class MainWindow(QObject):
 
         def getInfoPlayer():
             try:
-                player = CSGOStatsV2.CSGOStatsV2(steamId, detailsMatches=False)
+                player = CSGOStats.CSGOStatsV2(steamId, detailsMatches=False)
                 player.getWeapons()
                 player.getMaps()
                 self.resultSearch.emit(player.stats)
