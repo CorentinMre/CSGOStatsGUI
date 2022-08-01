@@ -1,12 +1,10 @@
 import sys
 import os
 
-#Utilisation de 'Thread' et 'sleep' pour faire un delay après que le joueur joue (le delay est de .15 secondes)
-#ce n'est pas obligatoire, mais pour une meilleure expérience, il est preferable de faire comme ceci (même si le jeu devient un peu plus lourd)
 from threading import Thread
 import requests
 from bs4 import BeautifulSoup
-#Importation de la classe 'CSGOStats'
+#Importing the 'CSGOStats' class
 import CSGOStatsV2
 
 # IMPORT MODULES
