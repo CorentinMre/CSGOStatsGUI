@@ -3,7 +3,7 @@
 <br/>
 
 
-<h2 style="font-family: sans-serif; font-weight: normal;" align="center"><strong>CSGO statistics</strong> avec une interface graphique</h2>
+<h2 style="font-family: sans-serif; font-weight: normal;" align="center"><strong>CSGO statistics</strong> with a graphical interface</h2>
 
 
 <br/>
