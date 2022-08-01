@@ -17,7 +17,7 @@
 
 ## Usage
 
-Clone le repo, et ...
+Clone the repo, and ...
 
 - `cd CSGOStatsGUI/`
 - `pip install -r requirements.txt`
