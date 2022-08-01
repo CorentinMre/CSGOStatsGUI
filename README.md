@@ -35,8 +35,6 @@ Clone the repo, and ...
 
 ## LICENSE
 
-MIT License
-
 Copyright (c) 2022 CorentinMre
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
