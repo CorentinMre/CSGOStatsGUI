@@ -157,7 +157,7 @@ Window{
                     width: 250
                     height: 40
                     color: "#ffffff"
-                    text: qsTr("Ozirys Production")
+                    text: qsTr("By CorentinMre")
                     anchors.verticalCenter: parent.verticalCenter
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
