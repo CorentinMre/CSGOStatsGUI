@@ -113,7 +113,7 @@ Window{
                 width: 98
                 height: 46
                 opacity: 1
-                text: qsTr("Rechercher")
+                text: qsTr("Find Player")
                 anchors.bottom: parent.bottom
                 anchors.horizontalCenterOffset: 1
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -175,7 +175,7 @@ Window{
                 height: 44
                 opacity: 1
                 anchors.horizontalCenter: parent.horizontalCenter
-                placeholderText: qsTr("Nom du joueur")
+                placeholderText: qsTr("Player name")
                 onAccepted : internal.search()
             }
 
@@ -196,7 +196,7 @@ Window{
                     x: 75
                     y: -39
                     color: "#ffffff"
-                    text: qsTr("Le profil du joueur est privé")
+                    text: qsTr("The player profile is private")
                     anchors.fill: parent
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
