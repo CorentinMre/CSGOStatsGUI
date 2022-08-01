@@ -77,7 +77,7 @@ class CSGOStats:
 
 if __name__ == "__main__":
 
-    player = CSGOStatsV2("misterchaos192",detailsMatches=False)
+    player = CSGOStats("misterchaos192",detailsMatches=False)
     player.getStats()
     player.getWeapons()
     player.getMaps()
